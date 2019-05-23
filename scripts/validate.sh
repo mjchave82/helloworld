@@ -1,2 +1,2 @@
 #!/bin/sh
-curl -I localhost:3000
+curl -I localhost:3000  
