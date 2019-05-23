@@ -1,7 +1,7 @@
 #!/bin/sh
     
-[[ -e /etc/init/helloworld.conf ]] \
-  && status helloworld | \
+[[ -e /etc/systemd/system/helloworld.service ]] \
+  && systemctl status helloworld | \
     grep -q '^helloworld start/running, process' \
   && [[ $? -eq 0 ]] \
-  && stop helloworld || echo "Application not started"  
+  && systemctl stop helloworld || echo "Application not started"  
